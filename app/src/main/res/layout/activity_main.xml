@@ -7,15 +7,27 @@
         name="user"
         type="com.nghiatt.demobinding.model.User"
         />
+    <variable
+        name="handlers"
+        type="com.nghiatt.demobinding.MainBindingActivity"
+        />
+    <import type="android.view.View"/>
   </data>
   <LinearLayout
-
-
+      android:gravity="center"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:orientation="vertical"
       tools:context=".MainActivity"
       >
+
+    <ImageView
+        android:src="@drawable/happy_face"
+        android:scaleType="fitCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="@{user.isHappy ? View.VISIBLE : View.GONE}"
+        />
 
     <TextView
         android:text="@{user.name}"
@@ -23,9 +35,10 @@
         android:layout_height="wrap_content"
         />
     <Button
-
+        android:text="Click"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="@{user.isHappy ? handlers.onClickHappy : handlers.onClickUnHappy}"
         />
   </LinearLayout>
 </layout>

@@ -8,22 +8,25 @@ import android.widget.Button;
 
 
 public class CategoryActivity extends AppCompatActivity {
-  @Override protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_category);
-    Button buttonOrigin = (Button) findViewById(R.id.btn_origin);
-    buttonOrigin.setOnClickListener(new View.OnClickListener() {
-      @Override public void onClick(View v) {
-        Intent intent = new Intent(CategoryActivity.this, OriginActivity.class);
-        startActivity(intent);
-      }
-    });
-    Button buttonDataBind = (Button) findViewById(R.id.btn_data_binding);
-    buttonDataBind.setOnClickListener(new View.OnClickListener() {
-      @Override public void onClick(View v) {
-        Intent intent = new Intent(CategoryActivity.this, MainBindingActivity.class);
-        startActivity(intent);
-      }
-    });
-  }
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_category);
+        Button buttonOrigin = (Button) findViewById(R.id.btn_origin);
+        buttonOrigin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CategoryActivity.this, OriginActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button buttonDataBind = (Button) findViewById(R.id.btn_data_binding);
+        buttonDataBind.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CategoryActivity.this, MainBindingActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 }

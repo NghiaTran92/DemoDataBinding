@@ -17,6 +17,8 @@
         </activity>
         <activity android:name=".MainBindingActivity"></activity>
         <activity android:name=".OriginActivity"></activity>
+        <activity android:name=".RecyclerViewActivity"></activity>
     </application>
 
 </manifest>
+

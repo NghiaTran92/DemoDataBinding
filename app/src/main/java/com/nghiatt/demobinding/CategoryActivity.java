@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.nghiatt.demobinding.adapter.RecyclerViewAdapter;
+
 
 public class CategoryActivity extends AppCompatActivity {
     @Override
@@ -25,6 +27,14 @@ public class CategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CategoryActivity.this, MainBindingActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button buttonRecyclerView=(Button)findViewById(R.id.btn_recycler_view);
+        buttonRecyclerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CategoryActivity.this,RecyclerViewActivity.class);
                 startActivity(intent);
             }
         });
